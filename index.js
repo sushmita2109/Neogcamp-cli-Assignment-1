@@ -26,7 +26,8 @@ answer:'yes'
 function play(question,answer)
   {
     var useranswer=readlineSync.question(quiz[i].question);
-    if(useranswer===quiz[i].answer)
+    var answers=useranswer.toLowerCase();
+    if(answers===quiz[i].answer)
     {
       console.log('You are correct');
       score=score+1;
